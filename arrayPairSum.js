@@ -36,3 +36,19 @@ function pairSum2 (array, k) {
 
   return pairs;
 }
+
+// O(n)
+function pairSum3 (array, k) {
+  var pairs = [];
+  var values = {};
+  array.forEach(function (el, arr, i) {
+    if (typeof value[el] !== 'undefined') {
+      pairs.push([i, value[el]]);
+    } else {
+      var companion = k - el;
+      value[companion] = i;
+    }
+  });
+
+  return pairs;
+}
