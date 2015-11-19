@@ -1,4 +1,5 @@
 // Given an integer array, output all pairs that sum up to a specific value k.
+// Value pairs should be unique and take the form [min, max]
 
 // O(n^2)
 function pairSum (array, k) {
@@ -52,3 +53,7 @@ function pairSum3 (array, k) {
 
   return pairs;
 }
+
+console.log(pairSum([1,2,3,4,3,1,2], 4));
+console.log(pairSum2([1,2,3,4,3,1,2], 4));
+console.log(pairSum3([1,2,3,4,3,1,2], 4));
