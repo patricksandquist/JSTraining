@@ -26,7 +26,7 @@ function pairSum2 (array, k) {
   while (i < j) {
     var sum = array[i] + array[j];
     if (sum === k) {
-      pairs.push([i, j]);
+      pairs.push([array[i], array[j]]);
       i++;
     } else if (sum < k) {
       i++;
@@ -41,13 +41,13 @@ function pairSum2 (array, k) {
 // O(n)
 function pairSum3 (array, k) {
   var pairs = [];
-  var values = {};
-  array.forEach(function (el, arr, i) {
-    if (typeof value[el] !== 'undefined') {
-      pairs.push([i, value[el]]);
+  var seen = {};
+
+  array.forEach(function (el, i, arr) {
+    if (seen[k - el]) {
+      pairs.push([el, k - el]);
     } else {
-      var companion = k - el;
-      value[companion] = i;
+      seen[el] = true;
     }
   });
 
