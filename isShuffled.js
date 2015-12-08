@@ -4,7 +4,26 @@
 // each string.
 
 function isShuffled(str1, str2, str3) {
-  
+  if (str1.length + str2.length !== str3.length) {
+    return false;
+  }
+  if (str1[0] !== str3[0] && str2[0] !== str3[0]) {
+    return false;
+  }
+  if (str1.length === 0 || str2.length === 0) {
+    if (str1 + str2 === str3) {
+      return true;
+    }
+  }
+
+  if (str1[0] === str3[0] && isShuffled(str1.slice(1), str2, str3.slice(1))) {
+    return true;
+  }
+  if (str2[0] === str3[0] && isShuffled(str1, str2.slice(1), str3.slice(1))) {
+    return true;
+  }
+
+  return false;
 }
 
 // Time complexity is O(n) where n is the length of str3.
