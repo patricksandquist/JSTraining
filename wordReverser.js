@@ -13,6 +13,8 @@ var reverser = function (str) {
   return cleanWords.reverse().join(' ');
 };
 
+// Time complexity is O(n).
+
 console.log(reverser("Hello world!") === "world! Hello");
 console.log(reverser("Hello    world!") === "world! Hello");
 console.log(reverser("My name is Patrick!") === "Patrick! is name My");
