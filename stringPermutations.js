@@ -16,3 +16,6 @@ var permutations = function (str) {
 
   return output;
 };
+
+// Time complexity is O(n!) which sounds bad but is actually optimal. This is
+// just a computationally intensive problem!
