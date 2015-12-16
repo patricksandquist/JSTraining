@@ -6,9 +6,9 @@
 //  [0, 0, 0, 0, 0, 0]]
 // => [[1, 1], [2, 3]]
 
-var rectangles_finder = function (arr) {
+var rectangle_finder = function (arr) {
   arr.forEach(function (row, i) {
-    
+    ul_col = row.indexOf(1);
   });
 };
 
