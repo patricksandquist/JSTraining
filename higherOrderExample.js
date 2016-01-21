@@ -15,3 +15,14 @@ function compareNumbers(x, y) {
 // argument to the sort function. When sort is invoked on line
 // 17, it will in turn invoke compareNumbers to sort the array.
 [3, 1, 4, 1, 5, 9].sort(compareNumbers);
+
+// This is the same as invoking the sort method with an anonymous function:
+[3, 1, 4, 1, 5, 9].sort(function(x, y) {
+  if (x < y) {
+    return -1;
+  } else if (x > y) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
