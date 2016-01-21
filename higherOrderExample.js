@@ -44,3 +44,7 @@ var upper = names.map(function (name) {
   return name.toUpperCase();
 });
 console.log(upper);
+
+// Note how there is a space after the word 'function' in the above example.
+// This is because the anonymous function is being defined in line 43, not
+// invoked. I include the space to reaffirm this distinction.
